@@ -1,0 +1,300 @@
+/* Variables de diseño oscuro */
+:root {
+    --bg: #0b1020;
+    --panel: rgba(23, 32, 51, 0.6);
+    /* Transparente para efecto cristal */
+    --border: rgba(56, 189, 248, 0.2);
+    --text: #eef2ff;
+    --muted: #93a4c4;
+    --accent1: #38bdf8;
+    --accent2: #a78bfa;
+    --accent3: #4ade80;
+}
+
+/* Modelo de caja y reseteo básico (Visto en clase) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo con múltiples difuminados (radiales) */
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg);
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(167, 139, 250, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(74, 222, 128, 0.1) 0%, transparent 50%);
+    background-attachment: fixed;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Encabezado con efecto Glassmorphism (difuminado) */
+header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: rgba(11, 16, 32, 0.6);
+    backdrop-filter: blur(12px);
+    /* El difuminado principal */
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(120deg, var(--accent1), var(--accent2));
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: var(--muted);
+}
+
+/* Navegación con Flexbox */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 99px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Transiciones fluidas */
+nav a:hover {
+    background: rgba(56, 189, 248, 0.1);
+    border-color: var(--accent1);
+    color: var(--accent1);
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Tarjetas principales difuminadas */
+.seccion {
+    margin-bottom: 4rem;
+    background: var(--panel);
+    backdrop-filter: blur(16px);
+    /* Difuminado en las tarjetas */
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.seccion:hover {
+    transform: translateY(-5px);
+    border-color: var(--border);
+}
+
+h2 {
+    color: var(--accent2);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    display: inline-block;
+    border-bottom: 2px solid var(--accent2);
+    padding-bottom: 0.3rem;
+}
+
+/* Contenido Sobre Mí */
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--accent1);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+figcaption {
+    margin-top: 0.8rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* Cuadrículas para Proyectos y Habilidades (CSS Grid) */
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    list-style: none;
+}
+
+li {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+li:hover {
+    background: rgba(167, 139, 250, 0.1);
+    border-color: var(--accent2);
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(167, 139, 250, 0.2);
+}
+
+/* Estilos de multimedia */
+.video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--border);
+}
+
+.video-container iframe,
+video {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+audio {
+    width: 100%;
+    border-radius: 12px;
+    outline: none;
+    margin-bottom: 1rem;
+}
+
+/* Formulario de Contacto (Flexbox) */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    color: var(--muted);
+    gap: 0.5rem;
+}
+
+input,
+textarea {
+    padding: 0.9rem;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text);
+    font-family: inherit;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--accent1);
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+    background: rgba(0, 0, 0, 0.6);
+}
+
+button {
+    padding: 0.9rem 2.5rem;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(120deg, var(--accent1), var(--accent2));
+    color: #0b1020;
+    font-weight: 800;
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.2s;
+    align-self: flex-start;
+    margin-top: 0.5rem;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+a {
+    color: var(--accent1);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--muted);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive (Celulares) */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .seccion {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Iconos de Redes Sociales */
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    /* Esta es la propiedad mágica que los centra horizontalmente */
+    align-items: center;
+    /* Los alinea verticalmente */
+    gap: 1.5rem;
+    /* Espacio entre los botones */
+    margin-top: 2rem;
+    width: 100%;
+    /* Asegura que la caja ocupe todo el ancho de la tarjeta */
+}

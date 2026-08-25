@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- ===== METADATOS ===== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de Johan Sánchez, aprendiz de ADSO en el SENA.">
+  <meta name="author" content="Johan Sánchez">
+  <title>Portafolio — Johan Sánchez</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- ===== ESTILOS CSS EXTERNOS ===== -->
+  <!-- Aquí conectamos el archivo HTML con el CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Johan Sánchez</h1>
+    <p>Software Analysis and Development Apprentice — SENA Bucaramanga </p>
+    <nav>
+      <a href="#sobre-mi">About me</a>
+      <a href="#proyectos">Projects</a>
+      <a href="#habilidades">Skills</a>
+      <a href="#contacto">Contact me</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="sobre-mi" class="seccion">
+      <h2>About me </h2>
+      <figure>
+        <img src="img/johan.jpg" alt="Foto de Johan Sánchez" width="220">
+        <figcaption>Hello! This is me </figcaption>
+      </figure>
+      <p> I am an apprentice in the program of <strong> Software Analysis and Development (ADSO)</strong> en el SENA. I
+        am a person who loves to learn continuously; that is why I manage my work and my studies using a second virtual
+        brain that I have built myself in the Obsidian program. Beyond code, I am passionate about sports, I really
+        enjoy
+        listening to music, and I speak fluent English.</p>
+      <div class="redes-sociales">
+        <!-- Sustituye los enlaces (href) por los tuyos reales -->
+        <a href="https://www.instagram.com/johan.s.7?igsi=aDRxeWtmZHVtbDIw&utm_source=qr" target="_blank"
+          title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com/johansan0507-arch" target="_blank" title="GitHub"><i
+            class="fa-brands fa-github"></i></a>
+        <a href="https://wa.me/573203766735" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="mailto:johansan0507@gmail.com" title="Correo Electrónico"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </section>
+
+    <section id="proyectos" class="seccion">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <h3>Zupply</h3>
+          <p style="color:var(--muted); font-size: 0.9rem; margin-top: 0.5rem;">Application under development focused on
+            logistics and operational management.</p>
+        </li>
+        <li>
+          <h3>LigaSport</h3>
+          <p style="color:var(--muted); font-size: 0.9rem; margin-top: 0.5rem;">Software platform oriented to the
+            automation of amateur sports leagues and tournaments.</p>
+        </li>
+        <li>
+          <h3>Portafolio Personal</h3>
+          <p style="color:var(--muted); font-size: 0.9rem; margin-top: 0.5rem;">Responsive website implementing CSS
+            Grid, Flexbox and modern designs.</p>
+        </li>
+      </ul>
+    </section>
+    <section id="multimedia" class="seccion">
+      <h2>Multimedia</h2>
+
+      <section id="multimedia" class="seccion">
+        <h2>Multimedia</h2>
+
+        <!-- ===== VIDEO DESCARGADO (Local) ===== -->
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--text); font-size: 1.1rem; margin-bottom: 0.8rem;">Mis mejores jugadas en Valorant</h3>
+          <!-- Reemplaza "mi-video.mp4" por el nombre exacto de tu archivo de video -->
+          <video src="./media/goal.mp4" controls style="width: 100%; border-radius: 12px; outline: none;">
+            Tu navegador no soporta el elemento de video.
+          </video>
+        </div>
+
+        <!-- ===== AUDIO DESCARGADO (Local) ===== -->
+        <div>
+          <h3 style="color: var(--text); font-size: 1.1rem; margin-bottom: 0.8rem;">Música que escucho mientras programo
+          </h3>
+          <!-- Reemplaza "mi-audio.mp3" por el nombre exacto de tu archivo de audio -->
+          <audio src="./media/cancion.mp4" controls style="width: 100%; outline: none;">
+            Tu navegador no soporta el elemento de audio.
+          </audio>
+        </div>
+      </section>
+
+      <section id="habilidades" class="seccion">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML5 & CSS3</li>
+          <li>JavaScript</li>
+          <li>PHP</li>
+          <li>Desarrollo Web Frontend / Backend</li>
+        </ul>
+      </section>
+
+      <section id="contacto" class="seccion">
+        <h2>Contacto</h2>
+        <form>
+          <label>Nombre: <input type="text" name="nombre" placeholder="Ingresa tu nombre"></label>
+          <label>Correo: <input type="email" name="correo" placeholder="ejemplo@correo.com"></label>
+          <label>Mensaje: <textarea name="mensaje" rows="4" placeholder="Escribe aquí tu mensaje..."></textarea></label>
+          <button type="submit">Enviar Mensaje</button>
+        </form>
+        <p style="margin-top: 1.5rem; text-align: center;">Mi GitHub: <a href="https://github.com/johansan0507-arch"
+            target="_blank">github.com/johansan0507-arch</a></p>
+      </section>
+
+  </main>
+
+  <footer>
+    <hr>
+    <p>© 2026 Johan Sánchez — Portafolio hecho en el curso de ADSO.</p>
+  </footer>
+</body>
+
+</html>
